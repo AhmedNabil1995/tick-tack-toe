@@ -1,0 +1,145 @@
+/* global styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: cursive;
+    min-height: 100vh;
+    background-color: steelblue;
+}
+
+.model{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.btn{
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: navy;
+    padding: 10px;
+    cursor: pointer;
+    width: 150px;
+}
+
+.btn:hover{
+    background-color: rgb(51, 51, 211);
+}
+
+.hide_Component{
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    z-index: -10;
+}
+
+.disable_click{
+    pointer-events: none !important;
+}
+
+/* Choose Player */
+.choose_player{
+    transition: all 0.3 ease;
+    width: 450px;
+    max-width: 100%;
+}
+.choose_player h1{
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.choose_player p{
+    font-weight: 500;
+    font-size: 18px;
+}
+.choose_player .btn_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+
+/* Board Game */
+
+.board_game{
+    width: 400px;
+
+}
+.players_turn{
+    padding: 5px 0 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid darkcyan;
+    position: relative;
+}
+
+.turn{
+    position: absolute;
+    background-color: darkcyan;
+    width: 150px;
+    height: calc(100% - 15px);
+    bottom: 10px;
+    z-index: -1;
+    margin-left: -155px;
+    border-radius: 5px;
+}
+
+.players_turn span{
+    position: relative;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+    font-size: 18px;
+    color: black;
+}
+
+.board{
+    width: 100%;
+    margin-top: 10px;
+}
+.board .row{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.board .row .col{
+    flex: 1;
+    height: 100px;
+    border: 2px solid darkcyan;
+    border-radius: 2px;
+    margin: 5px;
+    font-size: 50px;
+    text-transform: uppercase;
+    color: darkcyan;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Result of the Game */
+.result{
+    text-align: center;
+    width: 350px;
+}
+
+.result h2{
+    margin-bottom: 10px;
+}
